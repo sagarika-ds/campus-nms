@@ -4,15 +4,15 @@ A small open-source Network Management System (NMS) lab built with Docker. It mo
 
 Built as a placement-prep project for NMS/network-monitoring roles.
 
-Architecture
+Architecture:
 
                  Performance monitoring (graphs)
-snmp-agent  --SNMP-->  snmp-exporter  --metrics-->  Prometheus  --queries-->  Grafana
+    snmp-agent  --SNMP-->  snmp-exporter  --metrics-->  Prometheus  --queries-->  Grafana
 
      |
      | SNMP polling (fault checks)
      v
-OpenNMS + Postgres   -->   Alarms: Node down, SNMP failed, Cleared
+    OpenNMS + Postgres   -->   Alarms: Node down, SNMP failed, Cleared
                  Fault / alarm management
 
                  
@@ -25,13 +25,15 @@ OpenNMS + PostgreSQL	 Node discovery, fault detection, alarm lifecycle
 Docker                 Compose	Runs and networks all of the above
 
 
-Features
+Features:
 SNMP polling of interface-level metrics (ifHCInOctets, ifHCOutOctets, ifOperStatus, etc.)
 Live Grafana dashboard with 4 panels: outbound traffic, inbound traffic, device reachability, interface status
 Node auto-discovery and SNMP monitoring in OpenNMS
 Fault simulation: stopping the device triggers real alarms
 Full alarm lifecycle demo: New → Acknowledged → Escalated → Cleared
-How to Run It
+
+
+How to Run It:
 
 1. Start the core monitoring stack
 
