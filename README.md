@@ -12,8 +12,10 @@ Architecture:
      |
      | SNMP polling (fault checks)
      v
+     
     OpenNMS + Postgres   -->   Alarms: Node down, SNMP failed, Cleared
-                 Fault / alarm management
+                 Fault management
+
 
                  
 Tool                   Role
@@ -25,12 +27,14 @@ OpenNMS + PostgreSQL	 Node discovery, fault detection, alarm lifecycle
 Docker                 Compose	Runs and networks all of the above
 
 
+
 Features:
 SNMP polling of interface-level metrics (ifHCInOctets, ifHCOutOctets, ifOperStatus, etc.)
 Live Grafana dashboard with 4 panels: outbound traffic, inbound traffic, device reachability, interface status
 Node auto-discovery and SNMP monitoring in OpenNMS
 Fault simulation: stopping the device triggers real alarms
 Full alarm lifecycle demo: New → Acknowledged → Escalated → Cleared
+
 
 
 How to Run It:
@@ -68,20 +72,6 @@ docker start snmp-agent    # fix it
 
 Watch the alarm appear in OpenNMS (Monitoring → Alarms) and the Grafana "Device Reachable" panel drop to 0, then recover.
 
-Grafana Panels & Queries
-Panel	Query
-eth0 Outbound Traffic	rate(ifHCOutOctets{ifDescr="eth0"}[5m])
-eth0 Inbound Traffic	rate(ifHCInOctets{ifDescr="eth0"}[5m])
-Device Reachable	up{job="snmp"}
-eth0 Interface Status	ifOperStatus{ifDescr="eth0"}
-Screenshots
-
-
-What This Demonstrates
-SNMP-based monitoring fundamentals (OIDs, MIBs, polling)
-Performance monitoring vs. fault management as two distinct NMS concerns
-Alarm lifecycle management (raise, acknowledge, escalate, clear)
-Running and troubleshooting a multi-container Docker stack
 
 Tech Stack
 
