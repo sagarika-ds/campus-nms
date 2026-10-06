@@ -35,7 +35,7 @@ Node auto-discovery and SNMP monitoring in OpenNMS
 Fault simulation: stopping the device triggers real alarms
 Full alarm lifecycle demo: New → Acknowledged → Escalated → Cleared
 
-
+<!--
 
 How to Run It:
 
@@ -71,7 +71,7 @@ docker stop snmp-agent     # break it
 docker start snmp-agent    # fix it
 
 Watch the alarm appear in OpenNMS (Monitoring → Alarms) and the Grafana "Device Reachable" panel drop to 0, then recover.
-
+-->
 
 Tech Stack
 
