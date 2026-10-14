@@ -7,6 +7,7 @@ Built as a placement-prep project for NMS/network-monitoring roles.
 Architecture:
 
                  Performance monitoring (graphs)
+                 
     snmp-agent  --SNMP-->  snmp-exporter  --metrics-->  Prometheus  --queries-->  Grafana
 
      |
@@ -14,6 +15,7 @@ Architecture:
      v
      
     OpenNMS + Postgres   -->   Alarms: Node down, SNMP failed, Cleared
+    
                  Fault management
 
 
