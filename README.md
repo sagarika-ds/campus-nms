@@ -78,3 +78,9 @@ Watch the alarm appear in OpenNMS (Monitoring → Alarms) and the Grafana "Devic
 Tech Stack
 
 Docker · net-snmp · snmp_exporter · Prometheus · Grafana · OpenNMS Horizon · PostgreSQL
+
+Author:
+Sagarika D S
+
+📄 License
+Personal project - all rights reserved.
