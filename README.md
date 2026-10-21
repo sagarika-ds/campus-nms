@@ -4,19 +4,6 @@ A small open-source Network Management System (NMS) lab built with Docker. It mo
 
 Built as a placement-prep project for NMS/network-monitoring roles.
 
-Architecture:
-
-                 Performance monitoring (graphs)
-                 
-    snmp-agent  --SNMP-->  snmp-exporter  --metrics-->  Prometheus  --queries-->  Grafana
-
-     |
-     | SNMP polling (fault checks)
-     v
-     
-    OpenNMS + Postgres   -->   Alarms: Node down, SNMP failed, Cleared
-    
-                 Fault management
 
 
                  
