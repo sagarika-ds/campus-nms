@@ -1,8 +1,6 @@
 Smart Campus Network Monitoring System
 
-A small open-source Network Management System (NMS) lab built with Docker. It monitors a simulated network device over SNMP, shows live performance graphs in Grafana (via Prometheus), and manages faults and alarms in OpenNMS — including the full alarm lifecycle (New → Acknowledged → Escalated → Cleared).
-
-Built as a placement-prep project for NMS/network-monitoring roles.
+A small open-source Network Management System (NMS) lab built with Docker. It monitors a simulated network device over SNMP, shows live performance graphs in Grafana (via Prometheus), and manages faults and alarms in OpenNMS, including the full alarm lifecycle (New → Acknowledged → Escalated → Cleared).
 
 
 
